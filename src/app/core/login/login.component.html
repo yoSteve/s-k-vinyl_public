@@ -1,0 +1,25 @@
+<article>
+
+  <div class="card text-white bg-success">
+      <div class="card-header">Sign In</div>
+      <div class="card-body">
+  
+        <div class="form-goup">
+          <label for="email">Email</label>
+          <input class="form-control form-control-lg" type="email" placeholder="Email" #email required autofocus>
+        </div>
+  
+        <div class="form-goup">
+          <label for="password">Password</label>
+          <input class="form-control form-control-lg" type="password" placeholder="Password" #password required>
+        </div>
+  
+        <div class="buttons-container">
+          <button class="btn btn-primary" (click)="onSignIn(email.value, password.value)">Sign In</button>
+          <button class="btn btn-outline-white" (click)="onCancel()">Cancel</button>
+        </div>
+  
+      </div>
+    </div>
+
+</article>  

@@ -1,0 +1,61 @@
+
+<article>
+
+  <h3>Add New Album</h3>
+
+  <div class="card bg-secondary">
+    <div class="form-group">
+      <label for="search" class="white">Search Album or Artist</label>
+      <input id="search" [formControl]="searchField" type="text" class="form-control form-control-lg" matInput [matAutocomplete]="auto">
+    </div>
+  </div>
+
+  <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onSelected($event.option.value)">
+    <mat-option *ngIf="isLoading">
+      <div class="loading">
+        <div class="spinner-wrapper">
+          <skv-loading-spinner></skv-loading-spinner>
+        </div>
+        <span>Searching ...</span>
+      </div>
+    </mat-option>
+    
+    <mat-option *ngFor="let option of options$ | async" [value]="option">
+      <skv-option
+        [album]="option"
+        [query]="searchField.value"
+      ></skv-option>
+    </mat-option>
+  </mat-autocomplete>
+
+  <div class="card border-secondary">
+    <div class="form-group">
+      <label for="artist">Artist</label>
+      <input class="form-control form-control-lg" type="text" id="artist" [formControl]="artist">
+    </div>
+
+    <div class="form-group">
+      <label for="title">Album Title</label>
+      <input class="form-control form-control-lg" type="text" id="title" [formControl]="title">
+    </div>
+
+    <div class="form-group">
+      <label for="art">Album Art URL</label>
+      <input class="form-control form-control-lg" type="text" id="art" [formControl]="art" placeholder="http://">
+      <small class="hint">best image size: 300x300</small>
+    </div>
+
+    <div class="art-preview">
+      <ng-container *ngIf="!art.value">
+        <skv-placeholder title="No Album Art"></skv-placeholder>
+      </ng-container>
+      <ng-container *ngIf="art.value">
+        <img [src]="art.value">
+      </ng-container>
+    </div>
+
+  </div>
+
+  <button class="btn btn-success" type="submit" [disabled]="form.invalid" (click)="onSave()">Submit</button>
+
+</article>

@@ -1,0 +1,14 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+@import 'variables';
+
+.btn-outline-black {
+  color: $black;
+  border-color: $black;
+}
+
+.btn-outline-white {
+  color: $white;
+  border-color: $white;
+}

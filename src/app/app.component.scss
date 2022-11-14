@@ -1,0 +1,18 @@
+@import 'variables';
+
+main {
+  min-height: calc(100vh - 51px);
+  background-color: $black;
+} 
+
+header {
+  background-color: $info;
+  color: $white,
+}
+
+.navbar-brand {
+  font-family: $font-fancy;
+  font-size: x-large;
+  justify-self: flex-end;
+  text-shadow: 1px 1px 1px $secondary;
+}

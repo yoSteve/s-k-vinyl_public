@@ -1,0 +1,23 @@
+@import 'mixins';
+
+:host {
+  height: 100%;
+  @include flex(column);
+}
+
+article {
+  height: 100%;
+  width: 100%;
+}
+
+.card {
+  width: 100%;
+}
+
+.form-control {
+  margin-bottom: 1rem;
+}
+
+button {
+  margin: 0.5rem 0.5rem 0 0;
+}

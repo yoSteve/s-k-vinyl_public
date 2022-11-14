@@ -1,0 +1,12 @@
+<div class="album card border-primary">
+  <!-- <a routerLink="['albums', album.id]"> -->
+  <a href="#">
+    <ng-container *ngIf="album.thumbUrl; else noArt">
+      <img [src]="album.thumbUrl" class="thumbnail" alt="Album Art">
+    </ng-container>
+      
+    <ng-template #noArt>
+      <skv-placeholder [title]="album.artist" [subtitle]="album.title"></skv-placeholder>
+    </ng-template>
+  </a>
+</div>

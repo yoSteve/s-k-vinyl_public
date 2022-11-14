@@ -1,0 +1,6 @@
+  <div class="placeholder" [innerHTML]="vinylRecordSVG"></div>
+
+  <div class="text-wrapper">
+    <div *ngIf="title" class="card-title" [class.very-small]="title.length > 28">{{ title }}</div>
+    <div *ngIf="subtitle" class="card-text" [class.very-small]="subtitle.length > 28">{{ subtitle }}</div>
+  </div>

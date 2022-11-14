@@ -1,0 +1,19 @@
+@import 'variables';
+@import 'mixins';
+
+@keyframes rotation {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(359deg); }
+}
+
+.loading-spinner {
+  color: $vinyl;
+  background-color: $white;
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  line-height: 1.4;
+  animation: rotation 1.8s infinite linear;
+
+}

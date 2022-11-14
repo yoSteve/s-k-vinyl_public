@@ -1,0 +1,35 @@
+@import 'variables';
+@import 'mixins';
+
+:host {
+  @include flex(column);
+  background-color: $primary;
+  color: transparentize($white, 0.66);
+  position: relative;
+  padding: 12.2% 8%;
+  overflow: hidden;
+}
+
+.placeholder {
+  width: 90%;
+  height: 90%;
+}
+
+.text-wrapper {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  font-size: smaller;
+  color: $white;
+  text-shadow: 1px 1px 2px $success;
+
+  .card-text,
+  .card-title {
+    margin-bottom: 0.25rem;
+
+    &.very-small {
+      font-size: small;
+    }
+  }
+}
+

@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<mat-sidenav-container>
+  <mat-sidenav #sidenav [opened]="navOpen">
+    <skv-side-menu (navigate)="navOpen = !navOpen"></skv-side-menu>
+  </mat-sidenav>
+  
+  <mat-sidenav-content>
+    <header>
+      <nav class="navbar">
+        <button class="btn btn-outline-white" (click)="navOpen = !navOpen">
+          <fa-icon icon="bars"></fa-icon>
+        </button>
+        <span class="navbar-brand">{{title}}</span>
+      </nav>
+    </header>
+    
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

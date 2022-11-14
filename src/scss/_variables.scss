@@ -1,0 +1,83 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+@import './vendor/bootswatch/variables';
+
+$spanish-violet      : #4B296B;
+$ufo-green           : #23CE6B;
+$awesome             : #FF1053;
+$space-cadet         : #2E294E;
+$anti-flash-white    : #EEF0F2;
+
+// Color Palette
+$white:       $anti-flash-white;
+$primary:     $spanish-violet;
+$secondary:   $awesome;
+$vinyl:       $space-cadet;
+$success:     $ufo-green;
+$info:        $teal;
+$warning:     $yellow;
+$danger:      $red;
+$light:       $gray-300;
+$medium:      $gray-500;
+$dark:        $gray-700;
+
+
+/// Regular font family
+$font-regular: 'Roboto', sans-serif;
+
+/// Code (monospace) font family
+$font-fancy: 'Baloo Chettan', cursive;
+
+
+
+
+
+/// Copy text color
+/// @type Color
+$text-color: $light !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: $green !default;
+
+/// Light grey
+/// @type Color
+$light-grey: $gray-300 !default;
+
+/// Medium grey
+/// @type Color
+$mid-grey: $gray-500 !default;
+
+/// Dark grey
+/// @type Color
+$dark-grey: $gray-700 !default;
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+
+
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'small': 320px,
+  'medium': 768px,
+  'large': 1024px,
+) !default;
+
+
+
+
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;

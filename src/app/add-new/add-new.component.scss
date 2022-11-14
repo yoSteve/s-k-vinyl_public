@@ -1,0 +1,46 @@
+@import 'variables';
+@import 'mixins';
+
+label, small {
+  color: $medium;
+
+  &.white {
+    color: $white;
+  }
+}
+
+form {
+  margin-bottom: 2rem;
+}
+
+button {
+  font-size: large;
+}
+
+.card {
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.art-preview {
+  @include flex(column);
+  margin-bottom: 1rem;
+
+  skv-placeholder,
+  img {
+    width: 70%;
+  }
+}
+
+.loading {
+  @include flex(row, flex-start);
+  color: $medium;
+  line-height: 1.4;
+
+  .spinner-wrapper {
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 0.5rem;
+    margin-right: 1rem;
+  }
+}

@@ -1,0 +1,13 @@
+@import 'variables';
+@import 'mixins';
+
+.skv-option {
+  @include flex(row, flex-start);
+  // flex-wrap: wrap;
+  line-height: 1.4;
+  margin: 0.25rem 0;
+}
+
+img {
+  margin-right: 0.5rem;
+}

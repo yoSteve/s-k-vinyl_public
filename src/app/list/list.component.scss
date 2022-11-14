@@ -1,0 +1,11 @@
+@import 'mixins';
+
+.list-container {
+  @include flex(row, flex-start);
+  flex-wrap: wrap;
+  padding: 1rem 0.8rem;
+
+  & > * {
+    margin-bottom: calc(0.25rem - 2px);
+  }
+}

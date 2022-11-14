@@ -1,0 +1,36 @@
+@import 'variables';
+@import 'mixins';
+
+:host {
+  width: 120px;
+  margin: 2px;
+}
+
+.album {
+  position: relative;
+  padding: 2px;
+}
+
+.thumbnail,
+.no-thumbnail {
+  width: 7rem;
+  height: 7rem;
+}
+
+.no-thumbnail {
+  @include flex();
+  background-color: $primary;
+  color: transparentize($white, 0.66);
+  padding: 0.66rem;  
+}
+
+.text-wrapper {
+  position: absolute;
+  top: 0.5rem;
+  color: $white;
+
+  .card-title,
+  .card-text {
+    font-size: smaller;
+  }
+}

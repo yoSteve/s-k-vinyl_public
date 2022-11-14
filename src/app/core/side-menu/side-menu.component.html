@@ -1,0 +1,39 @@
+<section>
+  <div class="upper">
+    <h3>Menu</h3>
+  
+    <div class="links-container list-group">
+        <a [routerLink]="['list']" class="list-group-item" routerLinkActive="active" (click)="navigate.emit()">
+          <fa-icon icon="th"></fa-icon>
+          List View
+        </a>
+        <a [routerLink]="['new']" class="list-group-item" routerLinkActive="active" (click)="navigate.emit()">
+          <fa-icon icon="plus-circle"></fa-icon>
+          Add New
+        </a>
+    </div>
+  </div>
+
+  <ng-content></ng-content>
+
+  <div class="user-container list-group">
+    <ng-container *ngIf="user$ | async as user; else noUser">
+      <p>Signed in as <strong>{{ user.displayName }}</strong></p>
+      <button type="button" class="btn btn-outline-primary" (click)="signout()">
+        <fa-icon icon="sign-out-alt"></fa-icon>
+        Sign Out
+      </button>
+    </ng-container>
+    
+    <ng-template #noUser>
+      <button type="button" class="btn btn-primary" routerLinkActive="active">
+        <a [routerLink]="['signin']" (click)="navigate.emit()">
+          <fa-icon icon="sign-in-alt"></fa-icon>
+          Sign In
+        </a>
+      </button>
+    </ng-template>
+  </div>
+
+</section>
+

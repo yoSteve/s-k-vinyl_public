@@ -1,0 +1,7 @@
+<div class="skv-option" (click)="selected.emit(album)">
+  <img class="album-art" [src]="album.image[0]['#text']">
+  <span>
+    <em>{{ album.name }}</em>
+    <br> by {{ album.artist }}
+  </span>
+</div>
